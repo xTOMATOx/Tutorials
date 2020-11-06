@@ -18,5 +18,14 @@ class DB
         die($e->getMessage());
         }
     }
+
+    public static function getInstance()
+    {
+        if(!isset(self::$_instance))
+        {
+            self::$_instance = new DB();
+        }
+        return self::$_instance;
+    }
 }
 ?>
