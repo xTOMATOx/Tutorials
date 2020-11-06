@@ -1,5 +1,5 @@
 <?php
+require_once 'core/init.php';
 
-echo 'Hello, World!'
-
+echo Config::get('mysql/host');
 ?>
